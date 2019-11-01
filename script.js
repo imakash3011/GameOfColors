@@ -54,16 +54,19 @@ hardBtn.addEventListener("click",function(){
 resetButton.addEventListener("click",function(){
     // alert("Clicked ");
     //generate all new colors
-    var colors=generateRandomColors(numSquares);
+    colors=generateRandomColors(numSquares);
     //pick a new random color from array
-    var pickedColor=pickColor();
+     pickedColor=pickColor();
     //change the colorDisplay to match picked Color
     colorDisplay.textContent=pickedColor;
+    this.textContent="New Colors";
+
+    messageDisplay.textContent="";
     //change colors of squares
     for(var i=0;i<squares.length;i++){
         squares[i].style.background=colors[i];
     }
-    h1.style.background="#232323";
+    h1.style.background="steelblue";
 })
 
 colorDisplay.textContent=pickedColor;
